@@ -9,11 +9,11 @@ const App = () => {
           let weather = ""
           if (day.textDay.includes("雪")) {
             weather = day.textDay
-            city = weatherInfo.city + new Date().getMonth() + "月" + new Date(Date.now() + index * 24 * 60 * 60 * 1000).getDate()+ "日" + "白天："
+            city = weatherInfo.city + (new Date().getMonth() + 1) + "月" + new Date(Date.now() + index * 24 * 60 * 60 * 1000).getDate()+ "日" + "白天："
           }
           if(day.textNight.includes("雪")){
             weather = day.textNight
-            city = weatherInfo.city + new Date().getMonth()+ "月" + new Date(Date.now() + index * 24 * 60 * 60 * 1000).getDate()+ "日"  + "夜晚："
+            city = weatherInfo.city + (new Date().getMonth() + 1) + "月" + new Date(Date.now() + index * 24 * 60 * 60 * 1000).getDate()+ "日"  + "夜晚："
           }
             return (
               <div key={index}>
